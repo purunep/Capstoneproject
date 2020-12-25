@@ -7,6 +7,7 @@
 ## Project Set Up and Installation
 *OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
 Dowload the file from: https://www.kaggle.com/uciml/pima-indians-diabetes-database?select=diabetes.csv
+https://docs.microsoft.com/en-us/azure/machine-learning/how-to-set-up-training-targets?view=azure-ml-py
 
 ## Dataset
 
