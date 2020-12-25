@@ -17,7 +17,7 @@ def clean_data(data):
    
     # Clean and one hot encode data
     x_df = data.to_pandas_dataframe().dropna()
-    y_df = x_df.pop("Outcome").apply(lambda s: 1 if s == "yes" else 0)
+    y_df = x_df.pop("Outcome")
     return x_df, y_df
 
 x, y = clean_data(ds)
