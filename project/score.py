@@ -1,7 +1,7 @@
 import json
 import numpy as np
 import os
-from sklearn.externals import joblib
+import joblib
 
 def init():
     global model
