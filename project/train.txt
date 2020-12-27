@@ -49,3 +49,5 @@ if __name__ == '__main__':
     main()
 
 
+for pip_package in ["scikit-learn"]:
+    env.python.conda_dependencies.add_pip_package(pip_package)
