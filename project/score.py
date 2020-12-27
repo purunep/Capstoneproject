@@ -5,7 +5,7 @@ import joblib
 
 def init():
     global model
-    model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'puru-model.pkl')
+    model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'model.pkl')
     print("Found model:", os.path.isfile(model_path))
     model = joblib.load(model_path)
 
