@@ -51,3 +51,29 @@ if __name__ == '__main__':
 
 for pip_package in ["scikit-learn"]:
     env.python.conda_dependencies.add_pip_package(pip_package)
+    
+    ##writefile score.py
+import pickle
+import json
+import numpy 
+from sklearn.externals import joblib
+from sklearn.tree import DecisionTreeClassifier
+from azureml.core.model import Model
+import time
+
+def init():
+    global model
+    
+    model_path = Model.get_model_path('best-model')
+    model = joblib.load(model_path)
+
+
+def run(data):
+    try:
+        data = np.array(json.loads(data))
+        result = model.predict(data)
+# You can return any data type, as long as it is JSON serializable.
+        return result.tolist()
+    except Exception as e:
+        error = str(e)
+        return error
