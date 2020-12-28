@@ -44,6 +44,9 @@ def main():
 
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
+    os.makedirs('outputs', exist_ok=True)
+    # note file saved in the outputs folder is automatically uploaded into experiment record
+    joblib.dump(value=clf, filename='outputs/automlmodel.pkl')
 
 if __name__ == '__main__':
     main()
