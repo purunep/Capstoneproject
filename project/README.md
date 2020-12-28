@@ -56,6 +56,12 @@ For the configuration we have used the following parameters:
 
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
+Hyperparameters are adjustable parameters that let us control the model training process. Hyperparameter tuning is the process of finding the configuration of hyperparameters that
+results in the best performance. 
+For the experiment, I am using **Random sampling** , which supports discrete and continuous hyperparameeters.It supports early termination of low-performance runs.
+For the **Random sampling**, we providing parameter **-C** to provide uniform distributed between 0.5 to 1.00. And also using parameter **--max_iter** as choice value of 10, 20 or 30.
+For the termination policy, we are using **BanditPolicy**, its based on slack factor and evaluation interval.Bandit terminates runs where the primary metric is not within the 
+specified slack factor compared to the best performing run.
 
 
 ### Results
