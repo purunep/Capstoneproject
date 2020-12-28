@@ -36,16 +36,16 @@ For the experiment, we have used the different parameters for  **automl** settin
 For the configuration we have used the following parameters: 
 | Parameter                   | Value                  | Reason                                                                                 |
 | ----------------------------|:-----------------------|                                                      ---------------------------------:|
-|experiment_timeout_minutes        |30                    | To enable early termination if the score is not improving in the short term            |
-|task    |classification                     | We are going to solve the classification problem| 
-|primary_metric    |accuracy                       | The metric that Automated Machine Learning will optimize for model selection. We are going to optimize the Accuracy.| 
-|enable_onnx_compatible_models      |True                    | To enable ONNX-compatible models.      | 
-|compute_target                |cpu_cluster                    | To run teh Automated Machine learning experiment, we are going to use remote created compute cluster | 
+|experiment_timeout_minutes   |30                    | To specify how long in minutes, our experiment should continue to run         |
+|task                         |classification                     | We are going to solve the classification problem| 
+|primary_metric               |accuracy                       | The metric that Automated Machine Learning will optimize for model selection. We are going to optimize the Accuracy.| 
+|enable_onnx_compatible_models|True                    | To enable ONNX-compatible models.      | 
+|compute_target               |cpu_cluster                    | To run teh Automated Machine learning experiment, we are going to use remote created compute cluster | 
 |training_data                |train_data                    | To specify wherether featurization should be done automically or not, auto is ued to do it automatically.| 
-|label_column_name                |label                    | This is the model value to predict, our lable column is 'Outcome'.| 
-|path                 |project_folder                    | The full path to the Azure Machine Learning project folder.| 
-|n_cross_validations                |5                    | How many cross validations to perform when user validation data is not specified.| 
-|debug_log                 |automl_errors.log                    | The log file to write debug information| 
+|label_column_name            |label                    | This is the model value to predict, our lable column is 'Outcome'.| 
+|path                         |project_folder                    | The full path to the Azure Machine Learning project folder.| 
+|n_cross_validations          |5                    | How many cross validations to perform when user validation data is not specified.| 
+|debug_log                    |automl_errors.log                    | The log file to write debug information| 
 
 
 
