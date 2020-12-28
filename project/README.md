@@ -55,10 +55,10 @@ For the configuration we have used the following parameters:
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 ## Hyperparameter Tuning
-*TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
-Hyperparameters are adjustable parameters that let us control the model training process. Hyperparameter tuning is the process of finding the configuration of hyperparameters that
-results in the best performance. 
-For the experiment, I am using **Random sampling** , which supports discrete and continuous hyperparameeters.It supports early termination of low-performance runs.
+TODO: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search Hyperparameters are adjustable parameters that let us control the model training process
+
+Hyperparameter tuning is the process of finding the configuration of hyperparameters that results in the best performance. 
+For this experiment, we are using **Random sampling** , which supports discrete and continuous hyperparameeters.It supports early termination of low-performance runs.
 For the **Random sampling**, we providing parameter **-C** to provide uniform distributed between 0.5 to 1.00. And also using parameter **--max_iter** as choice value of 10, 20 or 30.
 For the termination policy, we are using **BanditPolicy**, its based on slack factor and evaluation interval.Bandit terminates runs where the primary metric is not within the 
 specified slack factor compared to the best performing run.
@@ -66,17 +66,58 @@ specified slack factor compared to the best performing run.
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
+We got **Accuracy** of : 0.7272 with primary_metric_config goal **maximize**. We used RandomParameterSampling as hyperparameter sampling.
+We could improve by implementing different hyperparameter tuning strategies like **Grid Search**.
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+After finding the best model, we registered the model by providing the model name. Then we created the deploy configuration and InferenceConfig by providing the
+entry script. After that we deployed the web service with ACI (Azure Container Instance).
+For querying the endpoint, we can either use the REST call by importing the requests or by using the service run method with payload.
+Here are the steps with REST call:
+1. Store the scoring uri and primary key
+2. Create the header with key "Content-Type" and value "application/json" and set the Authorization with Bearer token
+3. Create the sample input and post to the requests.
+Here is the sample input:
+```
+data= { "data":
+       [
+           {
+               'Pregnancies': 6,
+               'Glucose': 148,
+               'BloodPressure': 72,
+               'SkinThickness': 35,
+               'Insulin': 0,
+               'BMI': 33.6,
+               'DiabetesPedigreeFunction': 0.627,
+               'Age': 50
+               
+           },
+           {
+               'Pregnancies': 1,
+               'Glucose': 85,
+               'BloodPressure': 66,
+               'SkinThickness': 29,
+               'Insulin': 0,
+               'BMI': 26.6,
+               'DiabetesPedigreeFunction': 0.351,
+               'Age': 31,  
+           }
+       ]
+    }
+```
+
+
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 - A working model
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
+Here is the screencast that demonstrated all the above mentioned process. Plese click on 
+[link](https://www.youtube.com/watch?v=wGTl6yhKCxo&feature=youtu.be)
 
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+## Further Improvement
+We can further improve the model by collecting more data and cleaning data so that the datas is balanced and not biased to any one. Also we can run AutoML for longer duration to try out different models. Also we can try different techniques for Hyperparameter tuning.
