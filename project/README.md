@@ -24,6 +24,16 @@ I have downloaded the data from Kaggle [link](https://www.kaggle.com/uciml/pima-
 
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
+For the experiment, we have used the different parameters for  **automl** settings as below
+
+| Parameter               | Value                  | Reason                                                                                 |
+| ----------------------- |:-----------------------|                                                      ---------------------------------:|
+|enable_early_stopping    |True                    | To enable early termination if the score is not improving in the short term            |
+|iteration_timeout_minutes|5                       | To set the maximum time in minutes that each iteration can run for before it terminates| 
+|max_concurrent_iterations    |4                   | To specify the maximum number of iterations that would be executed in parallel. | 
+|max_cores_per_iteration    |-1                    | To specify the maximum number of threads to use for a given training iteration. -1 means to use all the possible cores per iteration per child-run. | 
+|featurization    |auto                            | To specify wherether featurization should be done automically or not, auto is ued to do it automatically.| 
+
 
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
