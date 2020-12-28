@@ -23,16 +23,30 @@ the patient has had, their BMI, insulin level, age and so on.
 I have downloaded the data from Kaggle [link](https://www.kaggle.com/uciml/pima-indians-diabetes-database?select=diabetes.csv) and uploaded to my github [link](https://raw.githubusercontent.com/purunep/Capstoneproject/main/project/data/diabetes.csv). We can load the dataset in the Notebook by providing the raw url of the dataset.
 
 ## Automated ML
-*TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
-For the experiment, we have used the different parameters for  **automl** settings as below
+For the experiment, we have used the different parameters for  **automl** settings as below:
 
-| Parameter               | Value                  | Reason                                                                                 |
-| ----------------------- |:-----------------------|                                                      ---------------------------------:|
-|enable_early_stopping    |True                    | To enable early termination if the score is not improving in the short term            |
-|iteration_timeout_minutes|5                       | To set the maximum time in minutes that each iteration can run for before it terminates| 
-|max_concurrent_iterations    |4                   | To specify the maximum number of iterations that would be executed in parallel. | 
-|max_cores_per_iteration    |-1                    | To specify the maximum number of threads to use for a given training iteration. -1 means to use all the possible cores per iteration per child-run. | 
-|featurization    |auto                            | To specify wherether featurization should be done automically or not, auto is ued to do it automatically.| 
+| Parameter                   | Value                  | Reason                                                                                 |
+| ----------------------------|:-----------------------|                                                      ---------------------------------:|
+|enable_early_stopping        |True                    | To enable early termination if the score is not improving in the short term            |
+|iteration_timeout_minutes    |5                       | To set the maximum time in minutes that each iteration can run for before it terminates| 
+|max_concurrent_iterations    |4                       | To specify the maximum number of iterations that would be executed in parallel. | 
+|max_cores_per_iteration      |-1                      | To specify the maximum number of threads to use for a given training iteration. -1 means to use all the possible cores per iteration per child-run.      | 
+|featurization                |auto                    | To specify wherether featurization should be done automically or not, auto is ued to do it automatically.| 
+
+For the configuration we have used the following parameters: 
+| Parameter                   | Value                  | Reason                                                                                 |
+| ----------------------------|:-----------------------|                                                      ---------------------------------:|
+|experiment_timeout_minutes        |30                    | To enable early termination if the score is not improving in the short term            |
+|task    |classification                     | We are going to solve the classification problem| 
+|primary_metric    |accuracy                       | The metric that Automated Machine Learning will optimize for model selection. We are going to optimize the Accuracy.| 
+|enable_onnx_compatible_models      |True                    | To enable ONNX-compatible models.      | 
+|compute_target                |cpu_cluster                    | To run teh Automated Machine learning experiment, we are going to use remote created compute cluster | 
+|training_data                |train_data                    | To specify wherether featurization should be done automically or not, auto is ued to do it automatically.| 
+|label_column_name                |label                    | This is the model value to predict, our lable column is 'Outcome'.| 
+|path                 |project_folder                    | The full path to the Azure Machine Learning project folder.| 
+|n_cross_validations                |5                    | How many cross validations to perform when user validation data is not specified.| 
+|debug_log                 |automl_errors.log                    | The log file to write debug information| 
+
 
 
 ### Results
