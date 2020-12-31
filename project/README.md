@@ -71,6 +71,9 @@ The below screen shows metrics details of the **VotingEnsemble**
 
 ![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/automl_metrics.png)
 
+The screen below shows the environment dependencies:
+
+![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/condaenv_automl.png)
 
 ## Hyperparameter Tuning
 Hyperparameter tuning is the process of finding the configuration of hyperparameters that results in the best performance. We used the LogisticRegression model for the experiment because we need to predict for discrete functions and its easier to implement, interpret and very efficient to train.
