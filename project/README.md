@@ -108,7 +108,7 @@ The below screen shows the model has been deployed and in **Healthy** status:
 
 ![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/automl_service.png)
 
-Here are the steps we followed for deploying the model:
+The below are the steps for deploying the model:
 
 After finding the best model, we registered the model by providing the model name. Then we created the deploy configuration and InferenceConfig by providing the
 entry script. After that we deployed the web service with ACI (Azure Container Instance).
