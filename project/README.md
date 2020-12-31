@@ -79,7 +79,6 @@ specified slack factor compared to the best performing run.
 
 
 ### Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 We got **Accuracy** of : 0.7272 with primary_metric_config goal **maximize**. We used RandomParameterSampling as hyperparameter sampling.
 We could improve by implementing different hyperparameter tuning strategies like **Grid Search**.
 Here are the run details from the experiment: 
@@ -87,8 +86,12 @@ Here are the run details from the experiment:
 ![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/hyperdrive_rundetails.png)
 
 ## Model Deployment
-The best model we got from HyperDrive experiment is of accuracy: 72% whereas the best model we got from Auto ML experiment is of accuracy: 78%.
+The best model we got from HyperDrive experiment is of accuracy: 72% whereas the best model we got from Auto ML experiment is of accuracy: 77%.
 So, we deployed the model from Auto ML experiment. 
+The below screen shows the model has been deployed and in **Healthy** status:
+
+![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/automl_service.png)
+
 Here are the steps we followed for deploying the model:
 
 After finding the best model, we registered the model by providing the model name. Then we created the deploy configuration and InferenceConfig by providing the
@@ -127,7 +130,9 @@ data= { "data":
     }
 ```
 
+The below screenshot shows the REST call made to the service and its success response:
 
+![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/restcall.png)
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
