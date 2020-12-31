@@ -4,24 +4,22 @@ import os
 import pickle
 import joblib
 from azureml.core.model import Model
+import pandas as pd
 
 def init():
     global model
-    # AZUREML_MODEL_DIR is an environment variable created during deployment.
-    # It is the path to the model folder (./azureml-models/$MODEL_NAME/$VERSION)
-    # For multiple models, it points to the folder containing all deployed models (./azureml-models)
-    mypath = os.getenv('AZUREML_MODEL_DIR')
-    print('puru my path: ' + mypath)
     model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'automlmodel.pkl')
     model = joblib.load(model_path)
-    #model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'model.pkl')
-    #model_path = Model.get_model_path('automlbestmodel')
-    #print('puru: ' + model_path)
-    #model = joblib.load(model_path + model_path + '/automlbestmodel.pkl')
+
 
 def run(raw_data):
-    data = np.array(json.loads(raw_data)['data'])
-    # make prediction
-    y_hat = model.predict(data)
-    # you can return any data type as long as it is JSON-serializable
-    return y_hat.tolist()
+    try:
+        data = json.loads(raw_data)['data']
+        data = pd.DataFrame.from_dict(data)
+        # make prediction
+        mypredict = model.predict(data)
+        # you can return any data type as long as it is JSON-serializable
+        return mypredict.tolist()
+    except Exception as ex:
+        error = str(ex)
+        return error
