@@ -4,7 +4,8 @@ This project is part of the Udacity Azure ML Nanodegree program. In this project
 
 ## Azure Auto ML Project Setup
 Here are the steps we use to setup our Azure Auto ML:
-![alt text](https://github.com/purunep/Capstoneproject/tree/main/project/images/steps.png)
+
+![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/steps.png)
 
 
 ## Dataset
