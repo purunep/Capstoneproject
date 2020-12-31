@@ -83,7 +83,21 @@ We got **Accuracy** of : 0.7272 with primary_metric_config goal **maximize**. We
 We could improve by implementing different hyperparameter tuning strategies like **Grid Search**.
 Here are the run details from the experiment: 
 
-![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/hyperdrive_rundetails.png)
+![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/hyperdrive_rundetails1.png)
+
+![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/hyperdrive_rundetails2.png)
+
+The below screen shows the best run details:
+
+![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/hyperdrive_parameters.png)
+
+The below screen shows the experiment running and in completed state:
+
+
+![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/hyperdrive_running.png)
+
+
+![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/hyper_run_completed.png)
 
 ## Model Deployment
 The best model we got from HyperDrive experiment is of accuracy: 72% whereas the best model we got from Auto ML experiment is of accuracy: 77%.
@@ -135,12 +149,8 @@ The below screenshot shows the REST call made to the service and its success res
 ![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/restcall.png)
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-- A working model
-- Demo of the deployed  model
-- Demo of a sample request sent to the endpoint and its response
 Here is the screencast that demonstrated all the above mentioned process. Plese click on 
-[link](https://www.youtube.com/watch?v=wGTl6yhKCxo&feature=youtu.be)
+[link](https://www.youtube.com/watch?v=V6PheIS5TfA&feature=youtu.be)
 
 ## Further Improvement
 We can further improve the model by collecting more data and cleaning data so that the datas is balanced and not biased to any one. Also we can run AutoML for longer duration to try out different models. Also we can try different techniques for Hyperparameter tuning.
