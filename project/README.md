@@ -73,6 +73,10 @@ Here are the run details from the experiment:
 ![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/hyperdrive_rundetails.png)
 
 ## Model Deployment
+The best model we got from HyperDrive experiment is of accuracy: 72% whereas the best model we got from Auto ML experiment is of accuracy: 78%.
+So, we deployed the model from Auto ML experiment. 
+Here are the steps we followed for deploying the model:
+
 After finding the best model, we registered the model by providing the model name. Then we created the deploy configuration and InferenceConfig by providing the
 entry script. After that we deployed the web service with ACI (Azure Container Instance).
 For querying the endpoint, we can either use the REST call by importing the requests or by using the service run method with payload.
