@@ -1,6 +1,6 @@
 # Capstone Project
 
-This project is part of the Udacity Azure ML Nanodegree program. In this project, we have used the external data source to predict. We have used Microsoft Azure ML SDK to build the model using AutoML and Hyperparameter tuning. After training the model, we registered the model and deployed with  the SDK. After its deployed, we have used the REST API to predict.
+This project is part of the Udacity Azure ML Nanodegree program. In this project, we have used the external data source to train the model and predict. We have used Microsoft Azure ML SDK to build the model using AutoML and Hyperparameter tuning. After training the model, we registered the best model and deployed as a Web service with the SDK. After its deployed, we have used the REST API and sdk to predict the outcome.
 
 ## Azure Auto ML Project Setup
 Here are the steps we use to setup our Azure Auto ML:
