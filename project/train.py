@@ -11,7 +11,7 @@ from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
 from azureml.core import Dataset
 
-ds= TabularDatasetFactory.from_delimited_files(path="https://raw.githubusercontent.com/purunep/Capstone/main/project/data/diabetes.csv")
+ds= TabularDatasetFactory.from_delimited_files(path="https://raw.githubusercontent.com/purunep/Capstoneproject/main/project/data/diabetes.csv")
 
 def clean_data(data):
    
@@ -46,7 +46,7 @@ def main():
     run.log("Accuracy", np.float(accuracy))
     os.makedirs('outputs', exist_ok=True)
     # note file saved in the outputs folder is automatically uploaded into experiment record
-    joblib.dump(value=model, filename='outputs/automlmodel.pkl')
+    joblib.dump(value=model, filename='outputs/hypermodel.pkl')
 
 if __name__ == '__main__':
     main()
