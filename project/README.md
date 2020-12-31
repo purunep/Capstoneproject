@@ -2,10 +2,9 @@
 
 This project is part of the Udacity Azure ML Nanodegree program. In this project, we have used the external data source to predict. We have used Microsoft Azure ML SDK to build the model using AutoML and Hyperparameter tuning. After training the model, we registered the model and deployed with  the SDK. After its deployed, we have used the REST API to predict.
 
-## Project Set Up and Installation
-*OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
-Dowload the file from: https://www.kaggle.com/uciml/pima-indians-diabetes-database?select=diabetes.csv
-https://docs.microsoft.com/en-us/azure/machine-learning/how-to-set-up-training-targets?view=azure-ml-py
+## Azure Auto ML Project Setup
+Here are the steps we use to setup our Azure Auto ML:
+![alt text](https://github.com/purunep/Capstoneproject/tree/main/project/images/steps.png)
 
 
 ## Dataset
@@ -23,6 +22,7 @@ the patient has had, their BMI, insulin level, age and so on.
 I have downloaded the data from Kaggle [link](https://www.kaggle.com/uciml/pima-indians-diabetes-database?select=diabetes.csv) and uploaded to my github [link](https://raw.githubusercontent.com/purunep/Capstoneproject/main/project/data/diabetes.csv). We can load the dataset in the Notebook by providing the raw url of the dataset.
 
 ## Automated ML
+Automated machine learning is the process of automating the time consuming , iterative tasks of machine learning model development.
 For the experiment, we have used the different parameters for  **automl** settings as below:
 
 | Parameter                   | Value                  | Reason                                                                                 |
@@ -50,14 +50,13 @@ For the configuration we have used the following parameters:
 
 
 ### Results
-*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
+The best model we got from the experiment is **VotingEnsemble**. We got an accuracty of 78%. The accuracy chould have been improve by enabling the Deeplearning and 
+also increasing the experiment timeout. Here are the screenshot of the **RunDetails**
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 ## Hyperparameter Tuning
-TODO: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search Hyperparameters are adjustable parameters that let us control the model training process
-
-Hyperparameter tuning is the process of finding the configuration of hyperparameters that results in the best performance. 
+Hyperparameter tuning is the process of finding the configuration of hyperparameters that results in the best performance. We used the LogisticRegression model for the experiment because we need to predict for discrete functions and its easier to implement, interpret and very efficient to train.
 For this experiment, we are using **Random sampling** , which supports discrete and continuous hyperparameeters.It supports early termination of low-performance runs.
 For the **Random sampling**, we providing parameter **-C** to provide uniform distributed between 0.5 to 1.00. And also using parameter **--max_iter** as choice value of 10, 20 or 30.
 For the termination policy, we are using **BanditPolicy**, its based on slack factor and evaluation interval.Bandit terminates runs where the primary metric is not within the 
