@@ -62,10 +62,13 @@ The screen below shows that run has been completed and shows the **VotingEnsembl
 ![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/automl_run.png)
 
 The below screen shows the parameters of the train model:
+
 ![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/automl_runsettings.png)
 
+The below screen shows metrics details of the **VotingEnsemble**
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/automl_metrics.png)
+
 
 ## Hyperparameter Tuning
 Hyperparameter tuning is the process of finding the configuration of hyperparameters that results in the best performance. We used the LogisticRegression model for the experiment because we need to predict for discrete functions and its easier to implement, interpret and very efficient to train.
