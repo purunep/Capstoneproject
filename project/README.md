@@ -68,11 +68,11 @@ specified slack factor compared to the best performing run.
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 We got **Accuracy** of : 0.7272 with primary_metric_config goal **maximize**. We used RandomParameterSampling as hyperparameter sampling.
 We could improve by implementing different hyperparameter tuning strategies like **Grid Search**.
+Here are the run details from the experiment: 
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/hyperdrive_rundetails.png)
 
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 After finding the best model, we registered the model by providing the model name. Then we created the deploy configuration and InferenceConfig by providing the
 entry script. After that we deployed the web service with ACI (Azure Container Instance).
 For querying the endpoint, we can either use the REST call by importing the requests or by using the service run method with payload.
