@@ -11,7 +11,7 @@ Here are the steps we use to setup our Azure Auto ML:
 ## Dataset
 
 ### Overview
-In this project, we are using the data from Kaggle. Here is the [link](https://www.kaggle.com/uciml/pima-indians-diabetes-database?select=diabetes.csv) for the dataset.
+In this project, we are using the data from Kaggle. Here is the [link](https://www.kaggle.com/uciml/pima-indians-diabetes-database?select=diabetes.csv){:target="_blank"} for the dataset.
 There are total 9 columns and 768 entries. 
 
 ### Task
@@ -20,7 +20,7 @@ The target (label) is "Outcome" column with values of 1 means has diabetes and 0
 the patient has had, their BMI, insulin level, age and so on.
 
 ### Access
-I have downloaded the data from Kaggle [link](https://www.kaggle.com/uciml/pima-indians-diabetes-database?select=diabetes.csv) and uploaded to my github [link](https://raw.githubusercontent.com/purunep/Capstoneproject/main/project/data/diabetes.csv). We can load the dataset in the Notebook by providing the raw url of the dataset.
+I have downloaded the data from Kaggle [link](https://www.kaggle.com/uciml/pima-indians-diabetes-database?select=diabetes.csv){:target="_blank"} and uploaded to my github [link](https://raw.githubusercontent.com/purunep/Capstoneproject/main/project/data/diabetes.csv){:target="_blank"}. We can load the dataset in the Notebook by providing the raw url of the dataset.
 
 ## Automated ML
 Automated machine learning is the process of automating the time consuming , iterative tasks of machine learning model development.
@@ -152,7 +152,7 @@ The below screenshot shows the REST call made to the service and its success res
 
 ## Screen Recording
 Here is the screencast that demonstrated all the above mentioned process. Plese click on 
-[link](https://www.youtube.com/watch?v=V6PheIS5TfA&feature=youtu.be)
+[link](https://www.youtube.com/watch?v=V6PheIS5TfA&feature=youtu.be){:target="_blank"}
 
 ## Further Improvement
 We can further improve the model by collecting more data and cleaning data so that the datas is balanced and not biased to any one. Also we can run AutoML for longer duration to try out different models. Also we can try different techniques for Hyperparameter tuning.
