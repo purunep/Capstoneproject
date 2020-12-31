@@ -54,11 +54,13 @@ For the configuration we have used the following parameters:
 The best model we got from the experiment is **VotingEnsemble**. We got an accuracty of 77%. The accuracy chould have been improve by enabling the Deeplearning and 
 also increasing the experiment timeout. Here are the screenshot of the **RunDetails**
 Here is the screenshot of **RunDetails**
+
 ![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/automl_rundetails.png)
 
 ![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/automl_rundetails_2.png)
 
 The screen below shows that run has been completed and shows the **VotingEnsemble** as a best model
+
 ![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/automl_run.png)
 
 The below screen shows the parameters of the train model:
@@ -100,7 +102,7 @@ The below screen shows the experiment running and in completed state:
 ![alt text](https://github.com/purunep/Capstoneproject/blob/main/project/images/hyper_run_completed.png)
 
 ## Model Deployment
-The best model we got from HyperDrive experiment is of accuracy: 72% whereas the best model we got from Auto ML experiment is of accuracy: 77%.
+The best model we got from HyperDrive experiment is of accuracy: 73% whereas the best model we got from Auto ML experiment is of accuracy: 77%.
 So, we deployed the model from Auto ML experiment. 
 The below screen shows the model has been deployed and in **Healthy** status:
 
